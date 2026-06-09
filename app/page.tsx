@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen text-white">
+    <main className="bg-black min-h-screen text-white pb-24">
 
       {/* Navbar */}
       <nav className="flex justify-between items-center px-6 py-4 bg-black">
@@ -13,6 +13,29 @@ export default function Home() {
           <a href="#">Profile</a>
         </div>
       </nav>
+
+        {/* Mobile Bottom Navigation */}
+<div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-800 flex justify-around py-3 md:hidden">
+  <a href="/" className="flex flex-col items-center text-white">
+    <span>⌂</span>
+    <span className="text-xs">Home</span>
+  </a>
+
+  <a href="/watch" className="flex flex-col items-center text-white">
+    <span>▶</span>
+    <span className="text-xs">Watch</span>
+  </a>
+
+  <a href="/store" className="flex flex-col items-center text-white">
+    <span>🛍</span>
+    <span className="text-xs">Store</span>
+  </a>
+
+  <a href="/profile" className="flex flex-col items-center text-white">
+    <span>👤</span>
+    <span className="text-xs">Profile</span>
+  </a>
+</div>
 
       {/* Hero Banner */}
       <section
@@ -74,3 +97,27 @@ export default function Home() {
     </main>
   );
 }
+{/* Bottom Navigation */}
+<div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-800 flex justify-around py-3 z-50">
+  
+  <a href="/" className="flex flex-col items-center text-white">
+    <span className="text-xl">⌂</span>
+    <span className="text-xs">Home</span>
+  </a>
+
+  <a href="/watch" className="flex flex-col items-center text-white">
+    <span className="text-xl">▶</span>
+    <span className="text-xs">Watch</span>
+  </a>
+
+  <a href="/store" className="flex flex-col items-center text-white">
+    <span className="text-xl">🛍</span>
+    <span className="text-xs">Store</span>
+  </a>
+
+  <a href="/profile" className="flex flex-col items-center text-white">
+    <span className="text-xl">👤</span>
+    <span className="text-xs">Profile</span>
+  </a>
+
+</div>
