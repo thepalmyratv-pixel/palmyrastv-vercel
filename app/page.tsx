@@ -33,12 +33,13 @@ export default function Home() {
             Watch Live Streaming Anytime
           </p>
 
-          <a
-            href="/watch"
-            className="bg-red-600 px-6 py-3 rounded-lg text-lg"
-          >
-            ▶ Watch Live
-          </a>
+          <div className="mt-6">
+            
+            <iframe
+    src="https://famelack.com/"
+    className="w-full max-w-5xl h-[70vh] rounded-xl"
+    allowFullScreen
+  />
         </div>
       </section>
 
