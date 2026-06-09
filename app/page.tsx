@@ -40,8 +40,10 @@ export default function Home() {
     className="w-full max-w-5xl h-[70vh] rounded-xl"
     allowFullScreen
   />
-        </div>
-      </section>
+  </div>
+
+ </div>
+</section>
 
       {/* Popular Videos */}
       <section className="p-8">
