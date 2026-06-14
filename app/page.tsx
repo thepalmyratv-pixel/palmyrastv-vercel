@@ -61,25 +61,25 @@ export default function Home() {
 
 </section>
 
-      {/* OTT Categories */}
+{/* OTT Categories */}
 
 <section className="px-8 py-10">
 
-  {/* Trending */}
+  {/* Trending Now */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🔥 Trending Now</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?1" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?2" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Latest */}
+  {/* Latest Releases */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🆕 Latest Releases</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?3" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?4" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/M7lc1UVf-VE/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
@@ -87,8 +87,8 @@ export default function Home() {
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">⏳ Coming Soon</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?5" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?6" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/kXYiU_JCYtU/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
@@ -96,75 +96,77 @@ export default function Home() {
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">⚽ FIFA World Cup</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?7" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?8" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/e-ORhEE9VVg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/fJ9rUzIMcZQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Highlights */}
+  {/* Match Highlights */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🎥 Match Highlights</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?9" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?10" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/ktvTqknDobU/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Interviews */}
+  {/* Exclusive Interviews */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🎤 Exclusive Interviews</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?11" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?12" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/60ItHLz5WEA/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/CevxZvSJLk8/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Academy */}
+  {/* Football Academy */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🏃 Football Academy</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?13" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?14" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/RgKAFK5djSk/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/JGwWNGJdvx8/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Moments */}
+  {/* Greatest Moments */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">⭐ Greatest Moments</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?15" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?16" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/OPf0YbXqDm0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/YQHsXMglC9A/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Stories */}
+  {/* Football Stories */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">📖 Football Stories</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?17" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?18" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/hT_nvWreIhg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/pRpeEdMmmQ0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* History */}
+  {/* Football History */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🏆 Football History</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?19" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?20" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/09R8_2nJtjg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/lWA2pjMjpBs/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
-  {/* Classics */}
+  {/* Classic Matches */}
   <div className="mb-12">
     <h2 className="text-3xl font-bold mb-5">🎬 Classic Matches</h2>
     <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://picsum.photos/320/180?21" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://picsum.photos/320/180?22" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://img.youtube.com/vi/kJQP7kiw5Fk/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
     </div>
   </div>
 
+
 </section>
+
 
     {/* Footer */}
 <footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10">
