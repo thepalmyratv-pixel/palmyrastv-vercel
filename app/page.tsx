@@ -27,7 +27,7 @@ export default function Home() {
 <div className="relative w-full max-w-5xl">
 
   <img
-    src="/live-banner.jpg"
+    src="https://picsum.photos/300/180?1"
     alt="Live TV"
     className="w-full rounded-xl"
   />
@@ -41,7 +41,7 @@ export default function Home() {
       ▶ LIVE
     </div>
   </a>
-  
+
 
  </div>
 </section>
