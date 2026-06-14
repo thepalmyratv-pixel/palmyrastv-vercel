@@ -27,23 +27,37 @@ export default function Home() {
 <div className="relative w-full max-w-5xl">
 
   <img
-    src="https://picsum.photos/300/180?1"
+    src="https://picsum.photos/1200/700"
     alt="Live TV"
     className="w-full rounded-xl"
   />
 
-  <a
-    href="https://famelack.com/"
-    target="_blank"
+  <button
+    onClick={() => {
+      const player = document.getElementById("live-player");
+      if (player) player.style.display = "block";
+    }}
     className="absolute inset-0 flex items-center justify-center"
   >
     <div className="bg-red-600 text-white px-8 py-4 rounded-full text-2xl">
       ▶ LIVE
     </div>
-  </a>
+  </button>
 
+</div>
 
- </div>
+<div
+  id="live-player"
+  style={{ display: "none" }}
+  className="mt-6"
+>
+  <iframe
+    src="https://famelack.com/"
+    className="w-full h-[70vh] rounded-xl"
+    allowFullScreen
+  />
+</div>
+
 </section>
 
       {/* Popular Videos */}
