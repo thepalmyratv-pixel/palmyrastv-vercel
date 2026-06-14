@@ -17,153 +17,191 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Banner */}
-      <section
-        className="min-h-[80vh] bg-cover bg-center flex items-center px-10 py-10"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600')",
-        }}
-      >
-<div className="relative w-full max-w-5xl">
+{/* Hero Video */}
+<section className="px-6 py-8">
 
-  <img
-    src="https://picsum.photos/1200/700"
-    alt="Live TV"
-    className="w-full rounded-xl"
-  />
+  <div className="max-w-7xl mx-auto">
 
-  <button
-    onClick={() => {
-      const player = document.getElementById("live-player");
-      if (player) player.style.display = "block";
-    }}
-    className="absolute inset-0 flex items-center justify-center"
-  >
-    <div className="bg-red-600 text-white px-8 py-4 rounded-full text-2xl">
-      ▶ LIVE
-    </div>
-  </button>
+    <h1 className="text-4xl md:text-6xl font-bold mb-3">
+      LIVE TV
+    </h1>
 
-</div>
+    <p className="text-gray-400 mb-6">
+      Watch Live Streaming Anytime
+    </p>
 
-<div
-  id="live-player"
-  style={{ display: "none" }}
-  className="mt-6"
->
+    {/* Main Featured Video */}
+    <div className="relative aspect-video rounded-2xl overflow-hidden">
+
   <iframe
-    src="https://famelack.com/"
-    className="w-full h-[70vh] rounded-xl"
+    src="https://www.youtube.com/embed/v=6k18EJY8zIc?autoplay=1"
+    className="absolute inset-0 w-full h-full"
     allowFullScreen
   />
+
 </div>
+
+  </div>
 
 </section>
 
 {/* OTT Categories */}
+<section className="px-8 py-10 space-y-12">
 
-<section className="px-8 py-10">
+  {/* Trending */}
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🔥 Trending Now</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
 
-  {/* Trending Now */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🔥 Trending Now</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID_1"
+        className="w-full h-64 rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID_2"
+        className="w-full h-64 rounded-xl"
+        allowFullScreen
+      />
     </div>
   </div>
 
   {/* Latest Releases */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🆕 Latest Releases</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/M7lc1UVf-VE/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🆕 Latest Releases</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Coming Soon */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">⏳ Coming Soon</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/kXYiU_JCYtU/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">⏳ Coming Soon</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* FIFA World Cup */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">⚽ FIFA World Cup</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/e-ORhEE9VVg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/fJ9rUzIMcZQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">⚽ FIFA World Cup</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_7" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_8" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Match Highlights */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🎥 Match Highlights</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/ktvTqknDobU/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🎥 Match Highlights</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_9" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_10" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Exclusive Interviews */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🎤 Exclusive Interviews</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/60ItHLz5WEA/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/CevxZvSJLk8/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🎤 Exclusive Interviews</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_11" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_12" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Football Academy */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🏃 Football Academy</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/RgKAFK5djSk/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/JGwWNGJdvx8/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🏃 Football Academy</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_13" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_14" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Greatest Moments */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">⭐ Greatest Moments</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/OPf0YbXqDm0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/YQHsXMglC9A/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">⭐ Greatest Moments</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_15" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_16" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Football Stories */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">📖 Football Stories</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/hT_nvWreIhg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/pRpeEdMmmQ0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">📖 Football Stories</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_17" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_18" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Football History */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🏆 Football History</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/09R8_2nJtjg/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/lWA2pjMjpBs/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🏆 Football History</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_19" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_20" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
 
   {/* Classic Matches */}
-  <div className="mb-12">
-    <h2 className="text-3xl font-bold mb-5">🎬 Classic Matches</h2>
-    <div className="flex gap-4 overflow-x-auto">
-      <a href="/watch"><img src="https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
-      <a href="/watch"><img src="https://img.youtube.com/vi/kJQP7kiw5Fk/maxresdefault.jpg" className="min-w-[320px] rounded-xl" alt="" /></a>
+  <div>
+    <div className="flex justify-between items-center mb-5">
+      <h2 className="text-3xl font-bold">🎬 Classic Matches</h2>
+      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_21" className="w-full h-64 rounded-xl" allowFullScreen />
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_22" className="w-full h-64 rounded-xl" allowFullScreen />
     </div>
   </div>
-
 
 </section>
 

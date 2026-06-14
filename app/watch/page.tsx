@@ -3,14 +3,17 @@ export default function WatchPage() {
     <main className="bg-black min-h-screen text-white p-6">
 
       <h1 className="text-4xl font-bold mb-6">
-        LIVE TV
+        ▶ Watch
       </h1>
 
-      <iframe
-        src="https://famelack.com/"
-        className="w-full h-[80vh] rounded-xl"
-        allowFullScreen
-      />
+      <div className="aspect-video w-full">
+        <iframe
+          className="w-full h-full rounded-xl"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="Video Player"
+          allowFullScreen
+        />
+      </div>
 
     </main>
   );
