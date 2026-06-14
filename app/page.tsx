@@ -34,7 +34,7 @@ export default function Home() {
     <div className="relative aspect-video rounded-2xl overflow-hidden">
 
   <iframe
-    src="https://www.youtube.com/embed/v=6k18EJY8zIc?autoplay=1"
+    src="https://www.youtube.com/embed/6k18EJY8zIc?autoplay=1"
     className="absolute inset-0 w-full h-full"
     allowFullScreen
   />
