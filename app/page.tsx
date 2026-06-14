@@ -24,23 +24,24 @@ export default function Home() {
             "url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600')",
         }}
       >
-        <div>
-          <h1 className="text-6xl font-bold mb-4">
-            LIVE TV
-          </h1>
+<div className="relative w-full max-w-5xl">
 
-          <p className="text-xl mb-6">
-            Watch Live Streaming Anytime
-          </p>
-
-          <div className="mt-6">
-            
-            <iframe
-    src="https://famelack.com/"
-    className="w-full max-w-5xl h-[70vh] rounded-xl"
-    allowFullScreen
+  <img
+    src="/live-banner.jpg"
+    alt="Live TV"
+    className="w-full rounded-xl"
   />
-  </div>
+
+  <a
+    href="https://famelack.com/"
+    target="_blank"
+    className="absolute inset-0 flex items-center justify-center"
+  >
+    <div className="bg-red-600 text-white px-8 py-4 rounded-full text-2xl">
+      ▶ LIVE
+    </div>
+  </a>
+  
 
  </div>
 </section>
