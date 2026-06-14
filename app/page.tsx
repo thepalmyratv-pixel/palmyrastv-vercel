@@ -1,3 +1,4 @@
+"use client";
 export default function Home() {
   return (
     <main className="bg-black min-h-screen text-white pb-24">
@@ -18,7 +19,7 @@ export default function Home() {
 
       {/* Hero Banner */}
       <section
-        className="h-[80vh] bg-cover bg-center flex items-center px-10"
+        className="min-h-[80vh] bg-cover bg-center flex items-center px-10 py-10"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600')",
@@ -60,19 +61,110 @@ export default function Home() {
 
 </section>
 
-      {/* Popular Videos */}
-      <section className="p-8">
-        <h2 className="text-3xl mb-6">
-          Popular Videos
-        </h2>
+      {/* OTT Categories */}
 
-        <div className="flex gap-4 overflow-x-auto">
-          <img src="https://picsum.photos/300/180?1" className="rounded-lg" alt="" />
-          <img src="https://picsum.photos/300/180?2" className="rounded-lg" alt="" />
-          <img src="https://picsum.photos/300/180?3" className="rounded-lg" alt="" />
-          <img src="https://picsum.photos/300/180?4" className="rounded-lg" alt="" />
-        </div>
-      </section>
+<section className="px-8 py-10">
+
+  {/* Trending */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🔥 Trending Now</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?1" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?2" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Latest */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🆕 Latest Releases</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?3" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?4" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Coming Soon */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">⏳ Coming Soon</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?5" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?6" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* FIFA World Cup */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">⚽ FIFA World Cup</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?7" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?8" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Highlights */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🎥 Match Highlights</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?9" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?10" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Interviews */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🎤 Exclusive Interviews</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?11" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?12" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Academy */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🏃 Football Academy</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?13" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?14" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Moments */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">⭐ Greatest Moments</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?15" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?16" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Stories */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">📖 Football Stories</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?17" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?18" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* History */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🏆 Football History</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?19" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?20" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+  {/* Classics */}
+  <div className="mb-12">
+    <h2 className="text-3xl font-bold mb-5">🎬 Classic Matches</h2>
+    <div className="flex gap-4 overflow-x-auto">
+      <a href="/watch"><img src="https://picsum.photos/320/180?21" className="min-w-[320px] rounded-xl" alt="" /></a>
+      <a href="/watch"><img src="https://picsum.photos/320/180?22" className="min-w-[320px] rounded-xl" alt="" /></a>
+    </div>
+  </div>
+
+</section>
 
     {/* Footer */}
 <footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10">
