@@ -60,12 +60,22 @@ export default function Home() {
     <div className="grid md:grid-cols-2 gap-5">
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="w-full h-64 rounded-xl"
+        className="w-full aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_2"
-        className="w-full h-64 rounded-xl"
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="w-full aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="w-full aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="w-full aspect-video rounded-xl"
         allowFullScreen
       />
     </div>
