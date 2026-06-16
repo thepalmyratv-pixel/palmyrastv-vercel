@@ -4,18 +4,11 @@ export default function Home() {
     <main className="bg-black min-h-screen text-white pb-24">
 
       {/* Top Navbar */}
-      <nav className="flex justify-between items-center px-6 py-4 bg-black">
+      <header className="flex justify-between items-center px-6 py-4 bg-black">
         <h1 className="text-2xl font-bold text-red-600">
           PalmyrasTV
         </h1>
-
-        <div className="flex gap-6">
-          <a href="/">Home</a>
-          <a href="/watch">Watch</a>
-          <a href="/store">Store</a>
-          <a href="/profile">Profile</a>
-        </div>
-      </nav>
+      </header>
 
 {/* Hero Video */}
 <section className="px-6 py-8">
@@ -50,32 +43,32 @@ export default function Home() {
 
   {/* Trending */}
   <div>
-    <div className="flex justify-between items-center mb-5">
-      <h2 className="text-3xl font-bold">🔥 Trending Now</h2>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-2xl font-bold">🔥 Trending Now</h2>
       <a href="/watch" className="text-red-500 font-semibold">
         More →
       </a>
     </div>
 
-    <div className="grid grid-cols-4 gap-4">
+    <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="w-full aspect-video rounded-xl"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="w-full aspect-video rounded-xl"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="w-full aspect-video rounded-xl"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="w-full aspect-video rounded-xl"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
     </div>
