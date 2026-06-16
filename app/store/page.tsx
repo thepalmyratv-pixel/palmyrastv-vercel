@@ -68,11 +68,10 @@
     <h3 className="font-semibold text-lg">Premium Membership</h3>
     <p className="text-red-500 font-bold mt-2">₹999</p>
     <button className="w-full bg-red-600 py-2 rounded-lg mt-3">
-      Subscribe
+      Buy Now
     </button>
   </div>
 </div>
-```
 
   </div>
 </section>
