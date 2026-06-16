@@ -16,7 +16,6 @@ export default function Home() {
 
   <div className="max-w-7xl mx-auto">
 
-```
 <span className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
   Featured Today
 </span>
