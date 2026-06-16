@@ -34,7 +34,7 @@ export default function Home() {
     <div className="relative aspect-video rounded-2xl overflow-hidden">
 
   <iframe
-    src="https://www.youtube.com/embed/6k18EJY8zIc?autoplay=1"
+    src="https://www.youtube.com/embed/Kb5BtqOnYJw?autoplay=1"
     className="absolute inset-0 w-full h-full"
     allowFullScreen
   />
@@ -59,7 +59,7 @@ export default function Home() {
 
     <div className="grid md:grid-cols-2 gap-5">
       <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_1"
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
         className="w-full h-64 rounded-xl"
         allowFullScreen
       />
