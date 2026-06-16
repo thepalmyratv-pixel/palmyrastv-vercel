@@ -44,13 +44,13 @@ export default function Home() {
   {/* Trending */}
   <div>
     <div className="flex justify-between items-center mb-4">
-      <h2 className="text-2xl font-bold">🔥 Trending Now</h2>
+      <h2 className="text-3xl font-bold">Trending Now</h2>
       <a href="/watch" className="text-red-500 font-semibold">
         More →
       </a>
     </div>
 
-    <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
         className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
@@ -76,29 +76,67 @@ export default function Home() {
 
   {/* Latest Releases */}
   <div>
-    <div className="flex justify-between items-center mb-5">
-      <h2 className="text-3xl font-bold">🆕 Latest Releases</h2>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Latest Releases</h2>
       <a href="/watch" className="text-red-500 font-semibold">
         More →
       </a>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-5">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" className="w-full h-64 rounded-xl" allowFullScreen />
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" className="w-full h-64 rounded-xl" allowFullScreen />
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
     </div>
   </div>
 
-  {/* Coming Soon */}
+{/* Upcoming */}
   <div>
-    <div className="flex justify-between items-center mb-5">
-      <h2 className="text-3xl font-bold">⏳ Coming Soon</h2>
-      <a href="/watch" className="text-red-500 font-semibold">More →</a>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Upcoming</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-5">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" className="w-full h-64 rounded-xl" allowFullScreen />
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" className="w-full h-64 rounded-xl" allowFullScreen />
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
     </div>
   </div>
 
