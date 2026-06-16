@@ -57,7 +57,7 @@ export default function Home() {
       </a>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-5">
+    <div className="grid grid-cols-4 gap-4">
       <iframe
         src="https://youtube.com/embed/C2xUv4Q3bVw"
         className="w-full aspect-video rounded-xl"
