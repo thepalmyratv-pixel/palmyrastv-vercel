@@ -113,7 +113,7 @@ export default function WatchPage() {
       </section>
 
     {/* Footer */}
-<footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10">
+<footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10 pb-24">
 
   <div className="grid md:grid-cols-3 gap-10">
 
@@ -163,7 +163,7 @@ export default function WatchPage() {
 </footer>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-800 flex justify-around py-3 z-50">
+      <div className="fixed bottom-0 left-0 w-full md:hidden bg-black border-t border-gray-800 flex justify-around py-3 z-50">
 
         <a href="/" className="flex flex-col items-center text-white">
           <span className="text-xl">⌂</span>
@@ -175,9 +175,9 @@ export default function WatchPage() {
           <span className="text-xs">Watch</span>
         </a>
 
-        <a href="/store" className="flex flex-col items-center text-white">
-          <span className="text-xl">▢</span>
-          <span className="text-xs">Store</span>
+        <a href="/watch" className="flex flex-col items-center text-red-500">
+          <span className="text-xl">▶</span>
+          <span className="text-xs">Watch</span>
         </a>
 
         <a href="/profile" className="flex flex-col items-center text-white">
