@@ -1,81 +1,57 @@
-const categories = [
-  {
-    title: "Trending Now",
-    videos: [
-      "https://www.youtube.com/embed/Kb5BtqOnYJw",
-      "https://www.youtube.com/embed/Kb5BtqOnYJw",
-      "https://www.youtube.com/embed/Kb5BtqOnYJw",
-      "https://www.youtube.com/embed/Kb5BtqOnYJw",
-    ],
-  },
-  {
-    title: "Latest Releases",
-    videos: [
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-    ],
-  },
-  {
-    title: "Sports Highlights",
-    videos: [
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-    ],
-  },
-  {
-    title: "Entertainment",
-    videos: [
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-    ],
-  },
-  {
-    title: "Music Videos",
-    videos: [
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-    ],
-  },
-  {
-    title: "News & Updates",
-    videos: [
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-      "https://www.youtube.com/embed/C2xUv4Q3bVw",
-    ],
-  },
+const sections = [
+  "Trending Now",
+  "Latest Videos",
+  "Palmyras TV Originals",
+  "Tamil News",
+  "World News",
+  "Sports",
+  "Football",
+  "Cricket",
+  "Music",
+  "Interviews",
+  "Documentaries",
+  "Entertainment",
+  "Short Films",
+  "Kids Corner",
+  "Devotional",
+  "Comedy",
+  "Technology",
+  "Business",
+  "Travel",
+  "Live Events",
+];
+
+const sampleVideos = [
+  "https://www.youtube.com/embed/Kb5BtqOnYJw",
+  "https://www.youtube.com/embed/C2xUv4Q3bVw",
+  "https://www.youtube.com/embed/Kb5BtqOnYJw",
+  "https://www.youtube.com/embed/C2xUv4Q3bVw",
+  "https://www.youtube.com/embed/Kb5BtqOnYJw",
 ];
 
 export default function WatchPage() {
   return (
     <div className="min-h-screen bg-black text-white">
 
-      {/* Hero Section */}
+      {/* Hero Banner */}
       <section className="px-6 py-8">
         <div className="max-w-7xl mx-auto">
 
-          <span className="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            PALMYRAS TV EXCLUSIVE
-          </span>
+          <div className="mb-4">
+            <span className="bg-red-600 px-4 py-2 rounded-full text-sm font-bold">
+              PALMYRAS TV EXCLUSIVE
+            </span>
+          </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-3">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">
             Featured Video
           </h1>
 
-          <p className="text-gray-400 mb-6 text-lg">
-            Watch the latest videos from Palmyras TV.
+          <p className="text-zinc-400 text-lg mb-6">
+            Watch the latest content from Palmyras TV.
           </p>
 
-          <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)]">
+          <div className="overflow-hidden rounded-3xl border border-zinc-800">
             <iframe
               src="https://www.youtube.com/embed/Kb5BtqOnYJw?autoplay=1&mute=1"
               className="w-full aspect-video"
@@ -87,34 +63,48 @@ export default function WatchPage() {
         </div>
       </section>
 
-      {/* Video Categories */}
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto space-y-12">
+      {/* Categories */}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto space-y-14">
 
-          {categories.map((category) => (
-            <div key={category.title}>
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                  {category.title}
+          {sections.map((title) => (
+            <div key={title}>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-3xl font-bold">
+                  {title}
                 </h2>
 
                 <a
                   href="/watch"
-                  className="text-red-500 hover:text-red-400 font-semibold"
+                  className="text-red-500 font-semibold"
                 >
                   View All →
                 </a>
               </div>
 
-              <div className="flex gap-4 overflow-x-auto pb-2">
-                {category.videos.map((video, index) => (
-                  <iframe
+              <div className="flex gap-5 overflow-x-auto pb-2">
+
+                {sampleVideos.map((video, index) => (
+                  <div
                     key={index}
-                    src={video}
-                    className="min-w-[280px] md:min-w-[350px] aspect-video rounded-xl border border-zinc-800"
-                    allowFullScreen
-                  />
+                    className="min-w-[320px] md:min-w-[380px]"
+                  >
+                    <iframe
+                      src={video}
+                      className="w-full aspect-video rounded-xl border border-zinc-800"
+                      allowFullScreen
+                    />
+
+                    <h3 className="mt-3 font-semibold">
+                      Video Title {index + 1}
+                    </h3>
+
+                    <p className="text-sm text-zinc-400">
+                      Palmyras TV
+                    </p>
+                  </div>
                 ))}
+
               </div>
             </div>
           ))}
