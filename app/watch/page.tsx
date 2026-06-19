@@ -1,3 +1,10 @@
+export default function WatchPage() {
+  return (
+    <div>
+      Watch Page
+    </div>
+  );
+}
 <section className="px-6 py-8">
 
   <div className="max-w-7xl mx-auto">
