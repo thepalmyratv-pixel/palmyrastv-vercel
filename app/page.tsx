@@ -107,7 +107,7 @@ export default function Home() {
     <div className="min-w-[320px]">
   <video
     controls
-    poster="/thumbnails/trending1.jpg"
+    poster="/thumbnails/trending2.jpg"
     className="w-full aspect-video rounded-xl"
   >
     <source src="/videos/trending1.mp4" type="video/mp4" />
@@ -126,7 +126,7 @@ export default function Home() {
     <div className="min-w-[320px]">
   <video
     controls
-    poster="/thumbnails/trending1.jpg"
+    poster="/thumbnails/trending3.jpg"
     className="w-full aspect-video rounded-xl"
   >
     <source src="/videos/trending1.mp4" type="video/mp4" />
