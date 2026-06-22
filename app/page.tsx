@@ -93,6 +93,10 @@ export default function Home() {
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
+    <h3 className="mt-2 font-semibold">
+      Martin Ødegaard Special
+    </h3>
+
   <video
   controls
   poster="/thumbnails/trending2.jpg"
@@ -100,6 +104,9 @@ export default function Home() {
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
+    <h3 className="mt-2 font-semibold">
+      FIFA World Cup Highlights
+    </h3>
 
   <video
   controls
@@ -108,6 +115,9 @@ export default function Home() {
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
+    <h3 className="mt-2 font-semibold">
+      FIFA World Cup Highlights
+    </h3>
 
   <video
   controls
@@ -116,6 +126,9 @@ export default function Home() {
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
+    <h3 className="mt-2 font-semibold">
+      FIFA World Cup Highlights
+    </h3>
 
   </div>
 </div> 
@@ -448,6 +461,7 @@ export default function Home() {
         allowFullScreen
       />
     </div>
+
   </div>
 
 </section>
@@ -521,7 +535,7 @@ export default function Home() {
           <span className="text-xs">Store</span>
         </a>
 
-        <a href="/profile" className="flex flex-col items-center text-white">
+        <a href="/profile" className="flex flex-col items-center te1xt-white">
           <span className="text-xl">👤</span>
           <span className="text-xs">Profile</span>
         </a>
