@@ -16,28 +16,53 @@ export default function Home() {
 
   <div className="max-w-7xl mx-auto">
 
-<span className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
-  Featured Today
-</span>
+    <span className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+      Featured Today
+    </span>
 
-<h1 className="text-4xl md:text-6xl font-bold mb-3">
-  Trending Now
-</h1>
+    <h1 className="text-4xl md:text-6xl font-bold mb-3">
+      Trending Now
+    </h1>
 
-<p className="text-gray-400 mb-6 text-lg">
-  Watch the latest trending videos, entertainment, news and sports.
-</p>
+    <p className="text-gray-400 mb-6 text-lg">
+      Watch the latest trending videos, entertainment, news and sports.
+    </p>
 
-<div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)]">
+    {/* Main Video */}
 
-  <iframe
-    src="https://www.youtube.com/embed/Kb5BtqOnYJw?autoplay=1&mute=1"
-    className="w-full aspect-video"
-    allow="autoplay"
-    allowFullScreen
-  />
+    <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
 
-</div>
+      <iframe
+        src="https://www.youtube.com/embed/Kb5BtqOnYJw"
+        className="w-full aspect-video"
+        allowFullScreen
+      />
+
+    </div>
+
+    {/* 3 Featured Videos */}
+
+    <div className="flex gap-4 overflow-x-auto">
+
+      <iframe
+        src="https://www.youtube.com/embed/Kb5BtqOnYJw"
+        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
+        allowFullScreen
+      />
+
+      <iframe
+        src="https://www.youtube.com/embed/M7lc1UVf-VE"
+        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
+        allowFullScreen
+      />
+
+      <iframe
+        src="https://www.youtube.com/embed/ysz5S6PUM-U"
+        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
+        allowFullScreen
+      />
+
+    </div>
 
   </div>
 
