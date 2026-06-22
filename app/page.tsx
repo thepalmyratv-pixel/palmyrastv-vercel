@@ -76,7 +76,6 @@ export default function Home() {
 <section className="px-8 py-10 space-y-12">
 
   {/* Trending */}
-  <div>
     <div className="flex justify-between items-center mb-4">
       <h2 className="text-3xl font-bold">Trending Now</h2>
       <a href="/watch" className="text-red-500 font-semibold">
@@ -85,40 +84,65 @@ export default function Home() {
     </div>
 
   <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-  
-  <video
-  controls
-  poster="/thumbnails/trending2.jpg"
-  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
->
-  <source src="/videos/trending1.mp4" type="video/mp4" />
-</video>
-    <h3 className="mt-2 font-semibold">
-      Martin Ødegaard Special
-    </h3>
+    
+     <div className="min-w-[320px]">
+    <video
+    controls
+    poster="/thumbnails/trending1.jpg"
+    className="w-full aspect-video rounded-xl"
+  >
+    <source src="/videos/trending1.mp4" type="video/mp4" />
+  </video>
 
-  <video
-  controls
-  poster="/thumbnails/trending2.jpg"
-  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
->
-  <source src="/videos/trending1.mp4" type="video/mp4" />
-</video>
-    <h3 className="mt-2 font-semibold">
-      FIFA World Cup Highlights
-    </h3>
+  <h3 className="mt-3 font-bold text-lg">
+    Martin Ødegaard Special
+  </h3>
 
-  <video
-  controls
-  poster="/thumbnails/trending3.jpg"
-  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
->
-  <source src="/videos/trending1.mp4" type="video/mp4" />
-</video>
-    <h3 className="mt-2 font-semibold">
-      FIFA World Cup Highlights
-    </h3>
+  <p className="text-gray-400 text-sm">
+    Exclusive football feature
+  </p>
 
+</div>
+
+    <div className="min-w-[320px]">
+  <video
+    controls
+    poster="/thumbnails/trending1.jpg"
+    className="w-full aspect-video rounded-xl"
+  >
+    <source src="/videos/trending1.mp4" type="video/mp4" />
+  </video>
+
+  <h3 className="mt-3 font-bold text-lg">
+    Martin Ødegaard Special
+  </h3>
+
+  <p className="text-gray-400 text-sm">
+    Exclusive football feature
+  </p>
+
+</div>
+
+    <div className="min-w-[320px]">
+  <video
+    controls
+    poster="/thumbnails/trending1.jpg"
+    className="w-full aspect-video rounded-xl"
+  >
+    <source src="/videos/trending1.mp4" type="video/mp4" />
+  </video>
+
+  <h3 className="mt-3 font-bold text-lg">
+    Martin Ødegaard Special
+  </h3>
+
+  <p className="text-gray-400 text-sm">
+    Exclusive football feature
+  </p>
+
+</div>
+
+    <div className="min-w-[320px]">
   <video
   controls
   poster="/thumbnails/trending4.jpg"
