@@ -12,6 +12,7 @@ export default function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   useEffect(() => {
+
     const timer = setInterval(() => {
       setCurrentVideo((prev) => (prev + 1) % videos.length);
     }, 10000);
@@ -21,12 +22,21 @@ export default function Home() {
   return (
     <main className="bg-black min-h-screen text-white pb-24">
 
-      {/* Top Navbar */}
-      <header className="flex justify-between items-center px-6 py-4 bg-black">
-        <h1 className="text-2xl font-bold text-red-600">
-          PalmyrasTV
-        </h1>
-      </header>
+{/* Top Navbar */}
+
+<header className="px-6 py-4 bg-black border-b border-zinc-800">
+
+  <img
+    src="/logo.jpg"
+    alt="PalmyrasTV"
+    className="h-12 w-auto mr-3"
+  />
+
+  <h1 className="text-2xl font-bold text-red-600">
+    PalmyrasTV
+  </h1>
+
+</header>
 
 {/* Hero Featured Video */}
 
@@ -51,10 +61,10 @@ export default function Home() {
 <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
 
   <iframe
-    src={`https://www.youtube.com/embed/${videos[currentVideo]}`}
-    className="w-full aspect-video rounded-3xl"
-    allowFullScreen
-  />
+  src={`https://www.youtube.com/embed/${videos[currentVideo]}?enablejsapi=1`}
+  className="w-full aspect-video rounded-3xl"
+  allowFullScreen
+/>
 
 </div>
 
