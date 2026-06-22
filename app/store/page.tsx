@@ -92,7 +92,9 @@ export default function StorePage() {
         </div>
 
       </div>
-          {/* Footer */}
+          
+{/* Footer */}
+
 <footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10">
 
   <div className="grid md:grid-cols-3 gap-10">

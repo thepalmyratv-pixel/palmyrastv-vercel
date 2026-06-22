@@ -84,28 +84,39 @@ export default function Home() {
       </a>
     </div>
 
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
+  <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+  
+  <video
+  controls
+  poster="/thumbnails/trending1.jpg"
+  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+>
+  <source src="/videos/trending1.mp4" type="video/mp4" />
+</video>
+  <video
+  controls
+  poster="/thumbnails/trending1.jpg"
+  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+>
+  <source src="/videos/trending1.mp4" type="video/mp4" />
+</video>
+
+  <video
+  controls
+  poster="/thumbnails/trending1.jpg"
+  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+>
+  <source src="/videos/trending1.mp4" type="video/mp4" />
+</video>
+
+  <video
+  controls
+  poster="/thumbnails/trending1.jpg"
+  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+>
+  <source src="/videos/trending1.mp4" type="video/mp4" />
+</video>
+
   </div>
 
   {/* Latest Releases */}
