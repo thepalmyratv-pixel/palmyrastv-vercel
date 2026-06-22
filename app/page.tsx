@@ -88,22 +88,14 @@ export default function Home() {
   
   <video
   controls
-  poster="/thumbnails/trending1.jpg"
+  poster="/thumbnails/trending2.jpg"
   className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
   <video
   controls
-  poster="/thumbnails/trending1.jpg"
-  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
->
-  <source src="/videos/trending1.mp4" type="video/mp4" />
-</video>
-
-  <video
-  controls
-  poster="/thumbnails/trending1.jpg"
+  poster="/thumbnails/trending2.jpg"
   className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
@@ -111,13 +103,22 @@ export default function Home() {
 
   <video
   controls
-  poster="/thumbnails/trending1.jpg"
+  poster="/thumbnails/trending3.jpg"
+  className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+>
+  <source src="/videos/trending1.mp4" type="video/mp4" />
+</video>
+
+  <video
+  controls
+  poster="/thumbnails/trending4.jpg"
   className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
 >
   <source src="/videos/trending1.mp4" type="video/mp4" />
 </video>
 
   </div>
+</div> 
 
   {/* Latest Releases */}
   <div>
