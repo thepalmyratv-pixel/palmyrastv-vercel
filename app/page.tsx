@@ -24,15 +24,15 @@ export default function Home() {
 
 {/* Top Navbar */}
 
-<header className="px-6 py-4 bg-black border-b border-zinc-800">
+<header className="flex items-center gap-3 px-6 py-4 bg-black border-b border-zinc-800">
 
   <img
     src="/logo.jpg"
     alt="PalmyrasTV"
-    className="h-12 w-auto mr-3"
+    className="h-12 w-12"
   />
 
-  <h1 className="text-2xl font-bold text-red-600">
+  <h1 className="text-3xl font-bold text-red-600">
     PalmyrasTV
   </h1>
 

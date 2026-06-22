@@ -1,116 +1,429 @@
-const sections = [
-  "Trending Now",
-  "Latest Videos",
-  "Palmyras TV Originals",
-  "Tamil News",
-  "World News",
-  "Sports",
-  "Football",
-  "Cricket",
-  "Music",
-  "Interviews",
-  "Documentaries",
-  "Entertainment",
-  "Short Films",
-  "Kids Corner",
-  "Devotional",
-  "Comedy",
-  "Technology",
-  "Business",
-  "Travel",
-  "Live Events",
-];
+"use client";
 
-const sampleVideos = [
-  "https://www.youtube.com/embed/Kb5BtqOnYJw",
-  "https://www.youtube.com/embed/C2xUv4Q3bVw",
-  "https://www.youtube.com/embed/Kb5BtqOnYJw",
-  "https://www.youtube.com/embed/C2xUv4Q3bVw",
-  "https://www.youtube.com/embed/Kb5BtqOnYJw",
-];
+import { useEffect, useState } from "react";
 
-export default function WatchPage() {
+export default function Home() {
+    const videos = [
+    "gVPQtn-EmU4",
+    "ubEd0UwJbbg",
+    "0fmqqLJiDzI",
+  ];
+
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  useEffect(() => {
+
+    const timer = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 10000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
-    <div className="min-h-screen bg-black text-white">
+    <main className="bg-black min-h-screen text-white pb-24">
 
-      {/* Hero Banner */}
-      <section className="px-6 py-8">
-        <div className="max-w-7xl mx-auto">
+{/* Hero Featured Video */}
 
-          <div className="mb-4">
-            <span className="bg-red-600 px-4 py-2 rounded-full text-sm font-bold">
-              PALMYRAS TV EXCLUSIVE
-            </span>
-          </div>
+<section className="px-6 py-8">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            Featured Video
-          </h1>
+  <div className="max-w-7xl mx-auto">
 
-          <p className="text-zinc-400 text-lg mb-6">
-            Watch the latest content from Palmyras TV.
-          </p>
+    <span className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+      Featured Today
+    </span>
 
-          <div className="overflow-hidden rounded-3xl border border-zinc-800">
-            <iframe
-              src="https://www.youtube.com/embed/Kb5BtqOnYJw?autoplay=1&mute=1"
-              className="w-full aspect-video"
-              allow="autoplay"
-              allowFullScreen
-            />
-          </div>
+    <h1 className="text-4xl md:text-6xl font-bold mb-3">
+      Trending Now
+    </h1>
 
-        </div>
-      </section>
+    <p className="text-gray-400 mb-6 text-lg">
+      Watch the latest trending videos, entertainment, news and sports.
+    </p>
 
-      {/* Categories */}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto space-y-14">
+    {/* Main Featured Video */}
 
-          {sections.map((title) => (
-            <div key={title}>
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-3xl font-bold">
-                  {title}
-                </h2>
+<div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
 
-                <a
-                  href="/watch"
-                  className="text-red-500 font-semibold"
-                >
-                  View All →
-                </a>
-              </div>
+  <iframe
+  src={`https://www.youtube.com/embed/${videos[currentVideo]}?enablejsapi=1`}
+  className="w-full aspect-video rounded-3xl"
+  allowFullScreen
+/>
 
-              <div className="flex gap-5 overflow-x-auto pb-2">
+</div>
 
-                {sampleVideos.map((video, index) => (
-                  <div
-                    key={index}
-                    className="min-w-[320px] md:min-w-[380px]"
-                  >
-                    <iframe
-                      src={video}
-                      className="w-full aspect-video rounded-xl border border-zinc-800"
-                      allowFullScreen
-                    />
+  </div>
 
-                    <h3 className="mt-3 font-semibold">
-                      Video Title {index + 1}
-                    </h3>
+</section>
 
-                    <p className="text-sm text-zinc-400">
-                      Palmyras TV
-                    </p>
-                  </div>
-                ))}
+{/* OTT Categories */}
+<section className="px-8 py-10 space-y-12">
 
-              </div>
-            </div>
-          ))}
+  {/* Trending */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Trending Now</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
 
-        </div>
-      </section>
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Latest Releases */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Latest Releases</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Upcoming */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Upcoming</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Premier League */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Premier League</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Match Highlights */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Match Highlights</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Exclusive Interviews */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Exclusive Interviews</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Academy */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Academy</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Memorable Moments */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Memorable Moments</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Stories */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Stories</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Football History */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Football History</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  {/* Classic Matches */}
+  <div>
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">Classic Matches</h2>
+      <a href="/watch" className="text-red-500 font-semibold">
+        More →
+      </a>
+    </div>
+
+    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+      <iframe
+        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+</section>
+
 
     {/* Footer */}
 <footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10 pb-24">
@@ -187,6 +500,6 @@ export default function WatchPage() {
 
       </div>
 
-    </div>
+    </main>
   );
 }
