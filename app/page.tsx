@@ -1,5 +1,23 @@
 "use client";
+
+import { useEffect, useState } from "react";
+
 export default function Home() {
+    const videos = [
+    "gVPQtn-EmU4",
+    "ubEd0UwJbbg",
+    "0fmqqLJiDzI",
+  ];
+
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 10000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <main className="bg-black min-h-screen text-white pb-24">
 
@@ -28,41 +46,17 @@ export default function Home() {
       Watch the latest trending videos, entertainment, news and sports.
     </p>
 
-    {/* Main Video */}
+    {/* Main Featured Video */}
 
-    <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
+<div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
 
-      <iframe
-        src="https://www.youtube.com/embed/Kb5BtqOnYJw"
-        className="w-full aspect-video"
-        allowFullScreen
-      />
+  <iframe
+    src={`https://www.youtube.com/embed/${videos[currentVideo]}`}
+    className="w-full aspect-video rounded-3xl"
+    allowFullScreen
+  />
 
-    </div>
-
-    {/* 3 Featured Videos */}
-
-    <div className="flex gap-4 overflow-x-auto">
-
-      <iframe
-        src="https://www.youtube.com/embed/Kb5BtqOnYJw"
-        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
-        allowFullScreen
-      />
-
-      <iframe
-        src="https://www.youtube.com/embed/M7lc1UVf-VE"
-        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
-        allowFullScreen
-      />
-
-      <iframe
-        src="https://www.youtube.com/embed/ysz5S6PUM-U"
-        className="w-[350px] h-[200px] rounded-xl flex-shrink-0"
-        allowFullScreen
-      />
-
-    </div>
+</div>
 
   </div>
 
