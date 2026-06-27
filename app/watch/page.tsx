@@ -2,428 +2,264 @@
 
 import { useEffect, useState } from "react";
 
-export default function Home() {
-    const videos = [
-    "gVPQtn-EmU4",
-    "ubEd0UwJbbg",
-    "0fmqqLJiDzI",
-  ];
+const heroVideos = [
+  {
+    title: "Sample Title",
+    description: "PalmyrasTV Description",
+    image:
+      "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1600",
+  },
+  {
+    title: "Sample Title",
+    description: "PalmyrasTV Description",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600",
+  },
+  {
+    title: "Sample Title",
+    description: "PalmyrasTV Description",
+    image:
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600",
+  },
+  {
+    title: "Sample Title",
+    description: "PalmyrasTV Description",
+    image:
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600",
+  },
+  {
+    title: "Sample Title",
+    description: "PalmyrasTV Description",
+    image:
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600",
+  },
+];
 
-  const [currentVideo, setCurrentVideo] = useState(0);
+export default function WatchPage() {
 
-  useEffect(() => {
+const [currentHero, setCurrentHero] = useState(0);
 
-    const timer = setInterval(() => {
-      setCurrentVideo((prev) => (prev + 1) % videos.length);
-    }, 10000);
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentHero((prev) => (prev + 1) % heroVideos.length);
+  }, 8000);
 
-    return () => clearInterval(timer);
-  }, []);
-  return (
-    <main className="bg-black min-h-screen text-white pb-24">
+  return () => clearInterval(timer);
+}, []);
 
-{/* Hero Featured Video */}
+return (
+<main className="bg-black text-white min-h-screen">
 
-<section className="px-6 py-8">
+<section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
 
-  <div className="max-w-7xl mx-auto">
+  <img
+    src={heroVideos[currentHero].image}
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-    <span className="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
-      Featured Today
-    </span>
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
-    <h1 className="text-4xl md:text-6xl font-bold mb-3">
-      Trending Now
-    </h1>
+  <div className="relative z-10 h-full flex items-center">
 
-    <p className="text-gray-400 mb-6 text-lg">
-      Watch the latest trending videos, entertainment, news and sports.
-    </p>
+    <div className="px-6 md:px-16 max-w-3xl">
 
-    {/* Main Featured Video */}
+      <span className="bg-red-600 px-3 py-1 rounded-full text-sm">
+        Featured
+      </span>
 
-<div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_50px_rgba(239,68,68,0.20)] mb-6">
+      <h1 className="text-4xl md:text-7xl font-bold mt-4 mb-4">
+        {heroVideos[currentHero].title}
+      </h1>
 
-  <iframe
-  src={`https://www.youtube.com/embed/${videos[currentVideo]}?enablejsapi=1`}
-  className="w-full aspect-video rounded-3xl"
-  allowFullScreen
+      <p className="text-gray-300 text-lg mb-8">
+        {heroVideos[currentHero].description}
+      </p>
+
+      <button className="bg-red-600 px-8 py-3 rounded-xl font-bold hover:bg-red-700">
+        ▶ Watch Now
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section className="px-4 md:px-8 py-10 space-y-14">
+
+  <div>
+
+<div className="flex justify-between items-center mb-5">
+<h2 className="text-3xl font-bold">🔴 Live Now</h2>
+<a href="#" className="text-red-500">More →</a>
+</div>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{[1,2,3,4,5,6].map((item)=>(
+<div key={item} className="min-w-[300px]">
+
+<img
+src={`https://picsum.photos/500/300?random=${item}`}
+className="rounded-xl"
 />
+
+<h3 className="mt-3 font-semibold">
+Sample Title
+</h3>
+
+<p className="text-gray-400 text-sm">
+PalmyrasTV Description
+</p>
+
+</div>
+))}
 
 </div>
 
-  </div>
+</div>
+<div>
+
+<div className="flex justify-between items-center mb-5">
+<h2 className="text-3xl font-bold">⏳ Upcoming</h2>
+<a href="#" className="text-red-500">More →</a>
+</div>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{[7,8,9,10,11,12].map((item)=>(
+<div key={item} className="min-w-[300px]">
+
+<img
+src={`https://picsum.photos/500/300?random=${item}`}
+className="rounded-xl"
+/>
+
+<h3 className="mt-3 font-semibold">
+Sample Title
+</h3>
+
+<p className="text-gray-400 text-sm">
+PalmyrasTV Description
+</p>
+
+</div>
+))}
+
+</div>
+
+</div><div>
+
+<div className="flex justify-between items-center mb-5">
+<h2 className="text-3xl font-bold">🔥 Trending</h2>
+<a href="#" className="text-red-500">More →</a>
+</div>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{[13,14,15,16,17,18].map((item)=>(
+<div key={item} className="min-w-[300px]">
+
+<img
+src={`https://picsum.photos/500/300?random=${item}`}
+className="rounded-xl"
+/>
+
+<h3 className="mt-3 font-semibold">
+Sample Title
+</h3>
+
+<p className="text-gray-400 text-sm">
+PalmyrasTV Description
+</p>
+
+</div>
+))}
+
+</div>
+
+</div>
+<div>
+
+<div className="flex justify-between items-center mb-5">
+<h2 className="text-3xl font-bold">
+🎥 PalmyrasTV Exclusive
+</h2>
+<a href="#" className="text-red-500">More →</a>
+</div>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{[1,2,3,4,5,6].map((item)=>(
+<div key={item} className="min-w-[320px]">
+
+<video
+controls
+poster={`/thumbnails/palmyra${item}.jpg`}
+className="rounded-xl w-full"
+>
+<source
+src={`/videos/palmyra${item}.mp4`}
+type="video/mp4"
+/>
+</video>
+
+<h3 className="mt-3 font-semibold">
+Sample Title
+</h3>
+
+<p className="text-gray-400 text-sm">
+PalmyrasTV Description
+</p>
+
+</div>
+))}
+
+</div>
+
+</div>
+<div>
+
+<div className="flex justify-between items-center mb-5">
+<h2 className="text-3xl font-bold">
+🔴 RedlandFC
+</h2>
+<a href="#" className="text-red-500">More →</a>
+</div>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{[1,2,3,4,5,6].map((item)=>(
+<div key={item} className="min-w-[320px]">
+
+<video
+controls
+poster={`/thumbnails/redland${item}.jpg`}
+className="rounded-xl w-full"
+>
+<source
+src={`/videos/redland${item}.mp4`}
+type="video/mp4"
+/>
+</video>
+
+<h3 className="mt-3 font-semibold">
+Sample Title
+</h3>
+
+<p className="text-gray-400 text-sm">
+PalmyrasTV Description
+</p>
+
+</div>
+))}
+
+</div>
+
+</div>
 
 </section>
-
-{/* OTT Categories */}
-<section className="px-8 py-10 space-y-12">
-
-  {/* Trending */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Trending Now</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Latest Releases */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Latest Releases</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Upcoming */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Upcoming</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Premier League */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Premier League</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Match Highlights */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Match Highlights</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Exclusive Interviews */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Exclusive Interviews</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Academy */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Academy</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Memorable Moments */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Memorable Moments</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Stories */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Stories</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Football History */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Football History</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* Classic Matches */}
-  <div>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-3xl font-bold">Classic Matches</h2>
-      <a href="/watch" className="text-red-500 font-semibold">
-        More →
-      </a>
-    </div>
-
-    <div className="flex gap-4 horizontal-scroll scrollbar-hide">
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-      <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
-        className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-</section>
-
 
     {/* Footer */}
 <footer className="bg-zinc-950 border-t border-zinc-800 px-8 py-12 mt-10 pb-24">

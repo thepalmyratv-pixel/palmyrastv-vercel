@@ -333,22 +333,22 @@ export default function Home() {
 
     <div className="flex gap-4 horizontal-scroll scrollbar-hide">
       <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        src="https://youtube.com/embed/YjoV7UH_0ZM"
         className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        src="https://youtube.com/embed/YjoV7UH_0ZM"
         className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        src="https://youtube.com/embed/YjoV7UH_0ZM"
         className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
       <iframe
-        src="https://youtube.com/embed/C2xUv4Q3bVw"
+        src="https://youtube.com/embed/YjoV7UH_0ZM"
         className="min-w-[280px] md:min-w-[320px] aspect-video rounded-xl"
         allowFullScreen
       />
