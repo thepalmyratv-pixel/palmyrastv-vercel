@@ -39,32 +39,32 @@ const trendingVideos = [
   {
     title: "Video 1",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_1",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
   {
     title: "Video 2",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_2",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
   {
     title: "Video 3",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_3",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
   {
     title: "Video 4",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_4",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
   {
     title: "Video 5",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_5",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
   {
     title: "Video 6",
     desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/VIDEO_ID_6",
+    url: "https://youtube.com/embed/C2xUv4Q3bVw",
   },
 ];
 
