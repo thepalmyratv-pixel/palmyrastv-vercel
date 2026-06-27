@@ -35,6 +35,39 @@ const heroVideos = [
   },
 ];
 
+const trendingVideos = [
+  {
+    title: "Video 1",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_1",
+  },
+  {
+    title: "Video 2",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_2",
+  },
+  {
+    title: "Video 3",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_3",
+  },
+  {
+    title: "Video 4",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_4",
+  },
+  {
+    title: "Video 5",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_5",
+  },
+  {
+    title: "Video 6",
+    desc: "PalmyrasTV Description",
+    url: "https://www.youtube.com/embed/VIDEO_ID_6",
+  },
+];
+
 export default function WatchPage() {
 
 const [currentHero, setCurrentHero] = useState(0);
@@ -83,8 +116,7 @@ return (
     </div>
 
   </div>
-
-</section>
+  </section>
 
 <section className="px-4 md:px-8 py-10 space-y-14">
 
@@ -102,6 +134,7 @@ return (
 
 <img
 src={`https://picsum.photos/500/300?random=${item}`}
+alt="Sample Title"
 className="rounded-xl"
 />
 
@@ -133,6 +166,7 @@ PalmyrasTV Description
 
 <img
 src={`https://picsum.photos/500/300?random=${item}`}
+alt="Sample Title"
 className="rounded-xl"
 />
 
@@ -146,41 +180,46 @@ PalmyrasTV Description
 
 </div>
 ))}
-
-</div>
-
-</div><div>
-
-<div className="flex justify-between items-center mb-5">
-<h2 className="text-3xl font-bold">🔥 Trending</h2>
-<a href="#" className="text-red-500">More →</a>
-</div>
-
-<div className="flex gap-5 overflow-x-auto scrollbar-hide">
-
-{[13,14,15,16,17,18].map((item)=>(
-<div key={item} className="min-w-[300px]">
-
-<img
-src={`https://picsum.photos/500/300?random=${item}`}
-className="rounded-xl"
-/>
-
-<h3 className="mt-3 font-semibold">
-Sample Title
-</h3>
-
-<p className="text-gray-400 text-sm">
-PalmyrasTV Description
-</p>
-
-</div>
-))}
-
-</div>
 
 </div>
 <div>
+
+  <div className="flex justify-between items-center mb-5">
+    <h2 className="text-3xl font-bold">🔥 Trending</h2>
+    <a href="#" className="text-red-500">
+      More →
+    </a>
+  </div>
+
+  <div className="flex gap-5 overflow-x-auto scrollbar-hide">
+
+    {trendingVideos.map((video, index) => (
+
+      <div key={index} className="min-w-[320px]">
+
+        <iframe
+          src={video.url}
+          className="w-full aspect-video rounded-xl"
+          allowFullScreen
+        />
+
+        <h3 className="mt-3 font-semibold">
+          {video.title}
+        </h3>
+
+        <p className="text-gray-400 text-sm">
+          {video.desc}
+        </p>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
+
+</div>
 
 <div className="flex justify-between items-center mb-5">
 <h2 className="text-3xl font-bold">
@@ -218,9 +257,6 @@ PalmyrasTV Description
 
 </div>
 
-</div>
-<div>
-
 <div className="flex justify-between items-center mb-5">
 <h2 className="text-3xl font-bold">
 🔴 RedlandFC
@@ -257,7 +293,6 @@ PalmyrasTV Description
 
 </div>
 
-</div>
 
 </section>
 
