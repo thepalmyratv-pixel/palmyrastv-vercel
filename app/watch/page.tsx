@@ -95,7 +95,7 @@ return (
 <a href="#" className="text-red-500">More →</a>
 </div>
 
-<div className="flex gap-5 overflow-x-auto">
+<div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
 {[1,2,3,4,5,6].map((item)=>(
 <div key={item} className="min-w-[300px]">
@@ -126,7 +126,7 @@ PalmyrasTV Description
 <a href="#" className="text-red-500">More →</a>
 </div>
 
-<div className="flex gap-5 overflow-x-auto">
+<div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
 {[7,8,9,10,11,12].map((item)=>(
 <div key={item} className="min-w-[300px]">
@@ -156,7 +156,7 @@ PalmyrasTV Description
 <a href="#" className="text-red-500">More →</a>
 </div>
 
-<div className="flex gap-5 overflow-x-auto">
+<div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
 {[13,14,15,16,17,18].map((item)=>(
 <div key={item} className="min-w-[300px]">
@@ -189,7 +189,7 @@ PalmyrasTV Description
 <a href="#" className="text-red-500">More →</a>
 </div>
 
-<div className="flex gap-5 overflow-x-auto">
+<div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
 {[1,2,3,4,5,6].map((item)=>(
 <div key={item} className="min-w-[320px]">
@@ -228,7 +228,7 @@ PalmyrasTV Description
 <a href="#" className="text-red-500">More →</a>
 </div>
 
-<div className="flex gap-5 overflow-x-auto">
+<div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
 {[1,2,3,4,5,6].map((item)=>(
 <div key={item} className="min-w-[320px]">
