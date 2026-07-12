@@ -28,12 +28,12 @@ export default function Home() {
 
   <img
     src="/logo.jpg"
-    alt="PalmyrasTV"
+    alt="PalmyraOne"
     className="h-12 w-12"
   />
 
   <h1 className="text-3xl font-bold text-red-600">
-    PalmyrasTV
+    PalmyraOne
   </h1>
 
 </header>
@@ -498,11 +498,11 @@ export default function Home() {
 
     <div>
       <h3 className="text-2xl font-bold text-red-600 mb-3">
-        PalmyrasTV
+        PalmyraOne
       </h3>
 
       <p className="text-gray-400">
-        PalmyrasTV is a modern OTT streaming platform for
+        PalmyraOne is a modern OTT streaming platform for
         entertainment, sports, movies and digital culture connect.
       </p>
     </div>
@@ -536,7 +536,7 @@ export default function Home() {
   </div>
 
   <div className="border-t border-zinc-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-    © 2026 - PalmyrasTV by Assist Network • All Rights Reserved
+    © 2026 - PalmyraOne by Assist Network Ltd • All Rights Reserved
   </div>
 
 </footer>
