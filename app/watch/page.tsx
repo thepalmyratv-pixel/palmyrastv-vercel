@@ -89,7 +89,7 @@ return (
 
 
   <div className="flex justify-between items-center mb-5">
-    <h2 className="text-3xl font-bold">🔥 Trending</h2>
+    <h2 className="text-3xl font-bold">Trending</h2>
     <link href="#" className="text-red-500">
       More →
     </link>
