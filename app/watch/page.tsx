@@ -6,8 +6,7 @@ const heroVideos = [
   {
     title: "Sample Title",
     description: "PalmyrasTV Description",
-    image:
-      "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1600",
+    image: "https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
   },
   {
     title: "Sample Title",
@@ -39,32 +38,7 @@ const trendingVideos = [
   {
     title: "Video 1",
     desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/yWR3P3qie50",
-  },
-  {
-    title: "Video 2",
-    desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/d32gHiwwUb8",
-  },
-  {
-    title: "Video 3",
-    desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/d32gHiwwUb8",
-  },
-  {
-    title: "Video 4",
-    desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/yWR3P3qie50",
-  },
-  {
-    title: "Video 5",
-    desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/d32gHiwwUb8",
-  },
-  {
-    title: "Video 6",
-    desc: "PalmyrasTV Description",
-    url: "https://youtube.com/embed/yWR3P3qie50",
+    url: "https://www.youtube.com/embed/yWR3P3qie50",
   },
 ];
 
@@ -122,67 +96,6 @@ return (
 
   <div>
 
-<div className="flex justify-between items-center mb-5">
-<h2 className="text-3xl font-bold">🔴 Live Now</h2>
-<a href="#" className="text-red-500">More →</a>
-</div>
-
-<div className="flex gap-5 overflow-x-auto scrollbar-hide">
-
-{[1,2,3,4,5,6].map((item)=>(
-<div key={item} className="min-w-[300px]">
-
-<img
-src={`https://picsum.photos/500/300?random=${item}`}
-alt="Sample Title"
-className="rounded-xl"
-/>
-
-<h3 className="mt-3 font-semibold">
-Sample Title
-</h3>
-
-<p className="text-gray-400 text-sm">
-PalmyrasTV Description
-</p>
-
-</div>
-))}
-
-</div>
-
-</div>
-<div>
-
-<div className="flex justify-between items-center mb-5">
-<h2 className="text-3xl font-bold">⏳ Upcoming</h2>
-<a href="#" className="text-red-500">More →</a>
-</div>
-
-<div className="flex gap-5 overflow-x-auto scrollbar-hide">
-
-{[7,8,9,10,11,12].map((item)=>(
-<div key={item} className="min-w-[300px]">
-
-<img
-src={`https://picsum.photos/500/300?random=${item}`}
-alt="Sample Title"
-className="rounded-xl"
-/>
-
-<h3 className="mt-3 font-semibold">
-Sample Title
-</h3>
-
-<p className="text-gray-400 text-sm">
-PalmyrasTV Description
-</p>
-
-</div>
-))}
-
-</div>
-<div>
 
   <div className="flex justify-between items-center mb-5">
     <h2 className="text-3xl font-bold">🔥 Trending</h2>
@@ -219,7 +132,6 @@ PalmyrasTV Description
 
 </div>
 
-</div>
 
 <div className="flex justify-between items-center mb-5">
 <h2 className="text-3xl font-bold">
@@ -240,42 +152,6 @@ className="rounded-xl w-full"
 >
 <source
 src={`/videos/palmyra${item}.mp4`}
-type="video/mp4"
-/>
-</video>
-
-<h3 className="mt-3 font-semibold">
-Sample Title
-</h3>
-
-<p className="text-gray-400 text-sm">
-PalmyrasTV Description
-</p>
-
-</div>
-))}
-
-</div>
-
-<div className="flex justify-between items-center mb-5">
-<h2 className="text-3xl font-bold">
-🔴 RedlandFC
-</h2>
-<a href="#" className="text-red-500">More →</a>
-</div>
-
-<div className="flex gap-5 overflow-x-auto scrollbar-hide">
-
-{[1,2,3,4,5,6].map((item)=>(
-<div key={item} className="min-w-[320px]">
-
-<video
-controls
-poster={`/thumbnails/redland${item}.jpg`}
-className="rounded-xl w-full"
->
-<source
-src={`/videos/redland${item}.mp4`}
 type="video/mp4"
 />
 </video>
