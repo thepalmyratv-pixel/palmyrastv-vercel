@@ -27,7 +27,7 @@ export default function Home() {
 <header className="flex items-center gap-3 px-6 py-4 bg-black border-b border-zinc-800">
 
   <img
-    src="/logo.jpg"
+    src="/logo.png"
     alt="PalmyrasTV"
     className="h-12 w-12"
   />
