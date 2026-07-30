@@ -99,21 +99,23 @@ return (
 
     {trendingVideos.map((video, index) => (
 
-      <div key={index} className="min-w-[320px]">
+      <div key={video.id} className="w-[320px] flex-shrink-0">
 
-        <img
+  <Link href={`/watch/${video.id}`}>
+    <img
       src={video.thumbnail}
       alt={video.title}
-      className="w-full aspect-video rounded-xl object-cover"
-      />
+      className="w-full aspect-video rounded-xl object-cover hover:scale-105 transition duration-300 cursor-pointer"
+    />
+  </Link>
 
-        <h3 className="mt-3 font-semibold">
-          {video.title}
-        </h3>
+    <h3 className="mt-3 font-semibold">
+      {video.title}
+    </h3>
 
-        <p className="text-gray-400 text-sm">
-          {video.description}
-        </p>
+    <p className="text-gray-400 text-sm">
+      {video.description}
+    </p>
 
       </div>
 
@@ -216,25 +218,25 @@ PalmyrasTV Description
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-800 flex justify-around py-3 z-50">
 
-        <a href="/" className="flex flex-col items-center text-white">
+        <link href="/" className="flex flex-col items-center text-white">
           <span className="text-xl">⌂</span>
           <span className="text-xs">Home</span>
-        </a>
+        </link>
 
-        <a href="/watch" className="flex flex-col items-center text-white">
+        <link href="/watch" className="flex flex-col items-center text-white">
           <span className="text-xl">▶</span>
           <span className="text-xs">Watch</span>
-        </a>
+        </link>
 
-        <a href="/store" className="flex flex-col items-center text-white">
+        <link href="/store" className="flex flex-col items-center text-white">
           <span className="text-xl">▢</span>
           <span className="text-xs">Store</span>
-        </a>
+        </link>
 
-        <a href="/profile" className="flex flex-col items-center text-white">
+        <link href="/profile" className="flex flex-col items-center text-white">
           <span className="text-xl">👤</span>
           <span className="text-xs">Profile</span>
-        </a>
+        </link>
 
       </div>
 
