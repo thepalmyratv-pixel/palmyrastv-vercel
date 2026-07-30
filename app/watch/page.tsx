@@ -90,9 +90,9 @@ return (
 
   <div className="flex justify-between items-center mb-5">
     <h2 className="text-3xl font-bold">Trending</h2>
-    <link href="#" className="text-red-500">
+    <Link href="#" className="text-red-500">
       More →
-    </link>
+    </Link>
   </div>
 
   <div className="flex gap-5 overflow-x-auto scrollbar-hide">
@@ -130,7 +130,7 @@ return (
 <h2 className="text-3xl font-bold">
 🎥 PalmyrasTV Exclusive
 </h2>
-<link href="#" className="text-red-500">More →</link>
+<Link href="#" className="text-red-500">More →</Link>
 </div>
 
 <div className="flex gap-5 overflow-x-auto scrollbar-hide">
@@ -187,10 +187,10 @@ PalmyrasTV Description
       </h4>
 
       <div className="flex flex-col gap-2 text-gray-400">
-        <link href="/">Home</link>
-        <link href="/about">About</link>
-        <link href="/privacy">Privacy Policy</link>
-        <link href="/terms">Terms & Conditions</link>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/privacy">Privacy Policy</Link>
+        <Link href="/terms">Terms & Conditions</Link>
       </div>
     </div>
 
@@ -200,10 +200,10 @@ PalmyrasTV Description
       </h4>
 
       <div className="flex flex-col gap-2 text-gray-400">
-        <link href="#">YouTube</link>
-        <link href="#">Instagram</link>
-        <link href="#">Facebook</link>
-        <link href="#">X / Twitter</link>
+        <Link href="#">YouTube</Link>
+        <Link href="#">Instagram</Link>
+        <Link href="#">Facebook</Link>
+        <Link href="#">X / Twitter</Link>
       </div>
     </div>
 
@@ -218,25 +218,25 @@ PalmyrasTV Description
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-800 flex justify-around py-3 z-50">
 
-        <link href="/" className="flex flex-col items-center text-white">
+        <Link href="/" className="flex flex-col items-center text-white">
           <span className="text-xl">⌂</span>
           <span className="text-xs">Home</span>
-        </link>
+        </Link>
 
-        <link href="/watch" className="flex flex-col items-center text-white">
+        <Link href="/watch" className="flex flex-col items-center text-white">
           <span className="text-xl">▶</span>
           <span className="text-xs">Watch</span>
-        </link>
+        </Link>
 
-        <link href="/store" className="flex flex-col items-center text-white">
+        <Link href="/store" className="flex flex-col items-center text-white">
           <span className="text-xl">▢</span>
           <span className="text-xs">Store</span>
-        </link>
+        </Link>
 
-        <link href="/profile" className="flex flex-col items-center text-white">
+        <Link href="/profile" className="flex flex-col items-center text-white">
           <span className="text-xl">👤</span>
           <span className="text-xs">Profile</span>
-        </link>
+        </Link>
 
       </div>
 
