@@ -90,9 +90,9 @@ return (
 
   <div className="flex justify-between items-center mb-5">
     <h2 className="text-3xl font-bold">🔥 Trending</h2>
-    <a href="#" className="text-red-500">
+    <link href="#" className="text-red-500">
       More →
-    </a>
+    </link>
   </div>
 
   <div className="flex gap-5 overflow-x-auto scrollbar-hide">
@@ -130,7 +130,7 @@ return (
 <h2 className="text-3xl font-bold">
 🎥 PalmyrasTV Exclusive
 </h2>
-<a href="#" className="text-red-500">More →</a>
+<link href="#" className="text-red-500">More →</link>
 </div>
 
 <div className="flex gap-5 overflow-x-auto scrollbar-hide">
@@ -187,10 +187,10 @@ PalmyrasTV Description
       </h4>
 
       <div className="flex flex-col gap-2 text-gray-400">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms & Conditions</a>
+        <link href="/">Home</link>
+        <link href="/about">About</link>
+        <link href="/privacy">Privacy Policy</link>
+        <link href="/terms">Terms & Conditions</link>
       </div>
     </div>
 
@@ -200,10 +200,10 @@ PalmyrasTV Description
       </h4>
 
       <div className="flex flex-col gap-2 text-gray-400">
-        <a href="#">YouTube</a>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">X / Twitter</a>
+        <link href="#">YouTube</link>
+        <link href="#">Instagram</link>
+        <link href="#">Facebook</link>
+        <link href="#">X / Twitter</link>
       </div>
     </div>
 
