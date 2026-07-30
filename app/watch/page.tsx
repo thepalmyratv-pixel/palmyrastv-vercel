@@ -1,44 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const heroVideos = [
   {
-    title: "Sample Title",
-    description: "PalmyrasTV Description",
-    image: "https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
+  id: "yWR3P3qie50",
+  title: "Best Saves",
+  description: "FIFA World Cup",
+  thumbnail:
+"https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
   },
   {
-    title: "Sample Title",
-    description: "PalmyrasTV Description",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600",
-  },
-  {
-    title: "Sample Title",
-    description: "PalmyrasTV Description",
-    image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600",
-  },
-  {
-    title: "Sample Title",
-    description: "PalmyrasTV Description",
-    image:
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600",
-  },
-  {
-    title: "Sample Title",
-    description: "PalmyrasTV Description",
-    image:
-      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600",
+    id: "yWR3P3qie50",
+  title: "Best Goals",
+  description: "FIFA World Cup",
+  thumbnail:
+"https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
   },
 ];
 
 const trendingVideos = [
   {
-    title: "Video 1",
-    desc: "PalmyrasTV Description",
-    url: "https://www.youtube.com/embed/yWR3P3qie50",
+  id: "yWR3P3qie50",
+  title: "Best Saves",
+  description: "FIFA World Cup",
+  thumbnail: "https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
   },
 ];
 
@@ -60,9 +47,9 @@ return (
 <section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
 
   <img
-    src={heroVideos[currentHero].image}
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover"
+  src={heroVideos[currentHero].thumbnail}
+  alt={heroVideos[currentHero].title}
+  className="absolute inset-0 w-full h-full object-cover"
   />
 
   <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
@@ -83,9 +70,13 @@ return (
         {heroVideos[currentHero].description}
       </p>
 
-      <button className="bg-red-600 px-8 py-3 rounded-xl font-bold hover:bg-red-700">
-        ▶ Watch Now
-      </button>
+      <Link
+  href={`/watch/${heroVideos[currentHero].id}`}
+  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+>
+  <span className="text-2xl">▶</span>
+  <span>Watch Now</span>
+</Link>
 
     </div>
 
@@ -110,18 +101,18 @@ return (
 
       <div key={index} className="min-w-[320px]">
 
-        <iframe
-          src={video.url}
-          className="w-full aspect-video rounded-xl"
-          allowFullScreen
-        />
+        <img
+      src={video.thumbnail}
+      alt={video.title}
+      className="w-full aspect-video rounded-xl object-cover"
+      />
 
         <h3 className="mt-3 font-semibold">
           {video.title}
         </h3>
 
         <p className="text-gray-400 text-sm">
-          {video.desc}
+          {video.description}
         </p>
 
       </div>
