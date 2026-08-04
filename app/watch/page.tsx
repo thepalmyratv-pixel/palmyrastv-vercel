@@ -9,14 +9,14 @@ const heroVideos = [
   title: "Best Saves",
   description: "FIFA World Cup",
   thumbnail:
-"https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
+"https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
   },
   {
-    id: "yWR3P3qie50",
-  title: "Best Goals",
-  description: "FIFA World Cup",
-  thumbnail:
-"https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
+    id: "match1",
+    type: "local",
+    title: "Redland FC Match",
+    video: "/videos/PTV Intro.mp4",
+    thumbnail: "/thumbnails/PTV Intro.jpg",
   },
 ];
 
@@ -25,7 +25,7 @@ const trendingVideos = [
   id: "yWR3P3qie50",
   title: "Best Saves",
   description: "FIFA World Cup",
-  thumbnail: "https://img.youtube.com/vi/yWR3P3qie50/maxresdefault.jpg",
+  thumbnail: "https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
   },
 ];
 
