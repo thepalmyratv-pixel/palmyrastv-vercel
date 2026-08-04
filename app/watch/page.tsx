@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/  ge";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -9,14 +10,14 @@ const heroVideos = [
   title: "12 Objects You Can Never Touch",
   description: "The World's Most Protected Treasures",
   thumbnail:
-"https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
+"https://img.youtube.com/vi/etdqh4E5QI8/hqdefault.jpg",
   },
   {
-    id: "PTV Intro",
+    id: "PTVIntro",
     type: "local",
     title: "This is PalmyrasTV",
-    video: "/videos/PTV Intro.mp4",
-    thumbnail: "/thumbnails/PTV Intro.jpg",
+    video: "/videos/PTVIntro.mp4",
+    thumbnail: "/thumbnails/PTVIntro.jpg",
   },
 ];
 
@@ -25,7 +26,7 @@ const trendingVideos = [
   id: "etdqh4E5QI8",
   title: "Best Saves",
   description: "FIFA World Cup",
-  thumbnail: "https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
+  thumbnail: "https://img.youtube.com/vi/etdqh4E5QI8/hqdefault.jpg",
   },
 ];
 
@@ -97,7 +98,7 @@ return (
 
   <div className="flex gap-5 overflow-x-auto scrollbar-hide">
 
-    {trendingVideos.map((video, index) => (
+    {trendingVideos.map((video) => (
 
       <div key={video.id} className="w-[320px] flex-shrink-0">
 
