@@ -95,25 +95,6 @@ className="rounded-xl"
 <section className="px-6 md:px-10 py-10">
 
 <h2 className="text-3xl font-bold mb-5">
- Live TV
-</h2>
-
-<Link href="/watch/live">
-
-<img
-src="/livetv.jpg"
-className="rounded-xl"
-/>
-
-</Link>
-
-</section>
-
-
-
-<section className="px-6 md:px-10 py-10">
-
-<h2 className="text-3xl font-bold mb-5">
  Sports
 </h2>
 
