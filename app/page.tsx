@@ -80,7 +80,7 @@ className="w-[300px] flex-shrink-0"
 >
 
 <img
-src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
 className="rounded-xl"
 />
 
