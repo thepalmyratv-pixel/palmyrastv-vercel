@@ -13,11 +13,11 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <button
-            onClick={() => setMenuOpen(true)}
-            className="text-3xl hover:text-red-500"
-          >
-            ☰
-          </button>
+           onClick={() => setMenuOpen(true)}
+           className="relative z-[60] text-white text-3xl"
+        >
+          ☰
+        </button>
 
           <Link href="/" className="flex items-center gap-3">
             <img
@@ -38,7 +38,7 @@ export default function Navbar() {
             placeholder="Search videos..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="bg-zinc-900 border border-zinc-700 rounded-full px-10 py-2 w-56 md:w-72 focus:outline-none focus:border-red-600"
+            className="bg-zinc-900 text-white placeholder-gray-500 border border-zinc-700 rounded-full px-10 py-2 w-56 md:w-72 focus:outline-none focus:border-red-600"
           />
 
           <span className="absolute left-3 top-2.5 text-gray-400">
@@ -55,25 +55,44 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
           />
 
-          <aside className="fixed left-0 top-0 h-full w-72 bg-zinc-950 z-50 p-6">
+          <div className="fixed left-0 top-0 h-full w-64 bg-zinc-950 z-50">
 
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl mb-8"
-            >
-              ✕
-            </button>
+  <button
+  onClick={() => setMenuOpen(false)}
+  className="text-white text-3xl p-5"
+>
+  ✕
+</button>
 
-            <nav className="flex flex-col gap-5">
-              <Link href="/">Home</Link>
-              <Link href="/watch">Watch</Link>
-              <Link href="/store">Store</Link>
-              <Link href="/profile">Profile</Link>
-              <Link href="/about">About</Link>
-              <Link href="/privacy">Privacy</Link>
-            </nav>
+            <nav className="flex flex-col gap-6 px-6 mt-10">
 
-          </aside>
+    <Link href="/" className="text-white hover:text-red-500">
+      Home
+    </Link>
+
+    <Link href="/watch" className="text-white hover:text-red-500">
+      Watch
+    </Link>
+
+    <Link href="/store" className="text-white hover:text-red-500">
+      Store
+    </Link>
+
+    <Link href="/profile" className="text-white hover:text-red-500">
+      Profile
+    </Link>
+
+    <Link href="/about" className="text-white hover:text-red-500">
+      About
+    </Link>
+
+    <Link href="/privacy" className="text-white hover:text-red-500">
+      Privacy
+    </Link>
+
+  </nav>
+
+          </div>
         </>
       )}
     </>
