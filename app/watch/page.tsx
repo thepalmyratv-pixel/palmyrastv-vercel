@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 
 const heroVideos = [
   {
-  id: "yWR3P3qie50",
+  id: "etdqh4E5QI8",
   title: "12 Objects You Can Never Touch",
   description: "The World's Most Protected Treasures",
   thumbnail:
 "https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
   },
   {
-    id: "match1",
+    id: "PTV Intro",
     type: "local",
     title: "This is PalmyrasTV",
     video: "/videos/PTV Intro.mp4",
@@ -22,7 +22,7 @@ const heroVideos = [
 
 const trendingVideos = [
   {
-  id: "yWR3P3qie50",
+  id: "etdqh4E5QI8",
   title: "Best Saves",
   description: "FIFA World Cup",
   thumbnail: "https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
