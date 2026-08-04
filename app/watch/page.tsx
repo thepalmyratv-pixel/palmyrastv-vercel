@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 const heroVideos = [
   {
   id: "yWR3P3qie50",
-  title: "Best Saves",
-  description: "FIFA World Cup",
+  title: "12 Objects You Can Never Touch",
+  description: "The World's Most Protected Treasures",
   thumbnail:
 "https://img.youtube.com/vi/etdqh4E5QI8/maxresdefault.jpg",
   },
   {
     id: "match1",
     type: "local",
-    title: "Redland FC Match",
+    title: "This is PalmyrasTV",
     video: "/videos/PTV Intro.mp4",
     thumbnail: "/thumbnails/PTV Intro.jpg",
   },
