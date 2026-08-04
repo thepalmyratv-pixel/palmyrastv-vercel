@@ -29,11 +29,19 @@ export default function Home() {
 
 <section className="relative h-[65vh] md:h-[85vh] overflow-hidden">
 
-  <img
-    src={`https://img.youtube.com/vi/${videos[currentVideo]}/maxresdefault.jpg`}
-    className="absolute inset-0 w-full h-full object-cover"
-    alt=""
-  />
+  {videos.map((id, index) => (
+  <Link
+    key={index}
+    href={`/watch/${id}`}
+    className="w-[300px] flex-shrink-0"
+  >
+    <img
+  src={`https://img.youtube.com/vi/${videos[currentVideo]}/hqdefault.jpg`}
+  className="absolute inset-0 w-full h-full object-cover"
+  alt="Featured video"
+/>
+  </Link>
+))}
 
   <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
 
