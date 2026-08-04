@@ -18,9 +18,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">
-              Quick Links
-            </h4>
+            <h3 className="text-white font-bold">
+             Quick Links
+            </h3>
 
             <div className="flex flex-col gap-2 text-gray-400">
               <Link href="/">Home</Link>
@@ -31,9 +31,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">
-              Follow Us
-            </h4>
+            <h3 className="text-white font-bold">
+             Follow Us
+            </h3>
 
             <div className="flex flex-col gap-2 text-gray-400">
               <Link href="#">YouTube</Link>
