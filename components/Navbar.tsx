@@ -11,26 +11,28 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-black/90 backdrop-blur border-b border-zinc-800">
 
-        <div className="flex items-center gap-4">
-          <button
-           onClick={() => setMenuOpen(true)}
-           className="relative z-[60] text-white text-3xl"
-        >
-          ☰
-        </button>
+  <div className="flex items-center gap-4">
 
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/logo.png"
-              alt="PalmyrasTV"
-              className="w-10 h-10"
-            />
+    <button
+      onClick={() => setMenuOpen(true)}
+      className="text-white text-3xl relative z-[60]"
+    >
+      ☰
+    </button>
 
-            <h1 className="text-2xl md:text-3xl font-bold text-red-600">
-              PalmyrasTV
-            </h1>
-          </Link>
-        </div>
+    <Link href="/" className="flex items-center gap-3">
+      <img
+        src="/logo.png"
+        alt="PalmyrasTV"
+        className="w-10 h-10"
+      />
+
+      <h1 className="text-2xl md:text-3xl font-bold text-red-600">
+        PalmyrasTV
+      </h1>
+    </Link>
+
+  </div>
 
         <div className="relative">
           <input
