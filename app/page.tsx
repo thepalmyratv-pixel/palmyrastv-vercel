@@ -50,7 +50,7 @@ export default function Home() {
     <div>
 
       <h1 className="text-5xl md:text-7xl font-bold mb-5">
-        Featured Video
+        The World's Most Protected Treasures
       </h1>
 
       <p className="text-gray-300 max-w-xl mb-8">
