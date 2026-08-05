@@ -2,133 +2,183 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { videos } from "@/lib/videos";
 
-const heroVideos = [
-  {
-  id: "etdqh4E5QI8",
-  title: "12 Objects You Can Never Touch",
-  description: "The World's Most Protected Treasures",
-  thumbnail:
-"https://img.youtube.com/vi/etdqh4E5QI8/hqdefault.jpg",
-  },
-  {
-    id: "PTVIntro",
-    type: "local",
-    title: "This is PalmyrasTV",
-    video: "/videos/PTVIntro.mp4",
-    thumbnail: "/thumbnails/PTVIntro.jpg",
-  },
-];
+export default function Home() {
 
-const trendingVideos = [
-  {
-  id: "etdqh4E5QI8",
-  title: "Best Saves",
-  description: "FIFA World Cup",
-  thumbnail: "https://img.youtube.com/vi/etdqh4E5QI8/hqdefault.jpg",
-  },
-];
 
-export default function WatchPage() {
+  const [currentVideo, setCurrentVideo] = useState(0);
 
-const [currentHero, setCurrentHero] = useState(0);
+  useEffect(() => {
 
-useEffect(() => {
-  const timer = setInterval(() => {
-    setCurrentHero((prev) => (prev + 1) % heroVideos.length);
-  }, 8000);
+    const timer = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 10000);
 
-  return () => clearInterval(timer);
-}, []);
+    return () => clearInterval(timer);
+  }, []);
+  return (
+    <main className="bg-black min-h-screen text-white pb-24">
 
-return (
-<main className="bg-black text-white min-h-screen">
 
-<section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
 
-  <img
-  src={heroVideos[currentHero].thumbnail}
-  alt={heroVideos[currentHero].title}
-  className="absolute inset-0 w-full h-full object-cover"
-  />
 
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+<section className="relative h-[65vh] md:h-[85vh] overflow-hidden">
 
-  <div className="relative z-10 h-full flex items-center">
+  <Link href={`/watch/${videos[currentVideo].id}`}>
+<img
+src={
+  videos[currentVideo].type === "youtube"
+  ?
+  `https://img.youtube.com/vi/${videos[currentVideo].id}/hqdefault.jpg`
+  :
+  videos[currentVideo].thumbnail
+}
+className="absolute inset-0 w-full h-full object-cover"
+alt={videos[currentVideo].title}
+/>
+</Link>
 
-    <div className="px-6 md:px-16 max-w-3xl">
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
 
-      <span className="bg-red-600 px-3 py-1 rounded-full text-sm">
-        Featured
-      </span>
+  <div className="relative z-10 h-full flex items-center px-6 md:px-16">
 
-      <h1 className="text-4xl md:text-7xl font-bold mt-4 mb-4">
-        {heroVideos[currentHero].title}
-      </h1>
+    <div>
 
-      <p className="text-gray-300 text-lg mb-8">
-        {heroVideos[currentHero].description}
-      </p>
+      <h1 className="text-5xl md:text-7xl font-bold mb-5">
+       {videos[currentVideo].title}
+     </h1>
+
+      <p className="text-gray-300 max-w-xl mb-8">
+      {videos[currentVideo].description}
+    </p>
 
       <Link
-  href={`/watch/${heroVideos[currentHero].id}`}
-  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
->
-  <span className="text-2xl">▶</span>
-  <span>Watch Now</span>
-</Link>
+        href={`/watch/${videos[currentVideo].id}`}
+        className="bg-red-600 px-8 py-4 rounded-xl font-bold hover:bg-red-700"
+      >
+        ▶ Watch Now
+      </Link>
 
     </div>
 
   </div>
-  </section>
-
-<section className="px-4 md:px-8 py-10 space-y-14">
-
-  <div>
-
-
-  <div className="flex justify-between items-center mb-5">
-    <h2 className="text-3xl font-bold">Trending</h2>
-    <Link href="#" className="text-red-500">
-      More →
-    </Link>
-  </div>
-
-  <div className="flex gap-5 overflow-x-auto scrollbar-hide">
-
-    {trendingVideos.map((video) => (
-
-      <div key={video.id} className="w-[320px] flex-shrink-0">
-
-  <Link href={`/watch/${video.id}`}>
-    <img
-      src={video.thumbnail}
-      alt={video.title}
-      className="w-full aspect-video rounded-xl object-cover hover:scale-105 transition duration-300 cursor-pointer"
-    />
-  </Link>
-
-    <h3 className="mt-3 font-semibold">
-      {video.title}
-    </h3>
-
-    <p className="text-gray-400 text-sm">
-      {video.description}
-    </p>
-
-      </div>
-
-    ))}
-
-  </div>
-
-</div>
-
 
 </section>
 
 
-  </main>
+
+<section className="px-6 md:px-10 py-10">
+
+<h2 className="text-3xl font-bold mb-5">
+ Trending
+</h2>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{videos.map((video)=>(
+<Link
+key={video.id}
+href={`/watch/${video.id}`}
+className="w-[300px] flex-shrink-0"
+>
+
+<img
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
+className="rounded-xl"
+alt={video.title}
+/>
+
+</Link>
+))}
+
+</div>
+
+</section>
+
+
+<section className="px-6 md:px-10 py-10">
+
+<h2 className="text-3xl font-bold mb-5">
+ Sports
+</h2>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{videos.map((video)=>(
+
+<Link
+key={video.id}
+href={`/watch/${video.id}`}
+className="w-[300px] flex-shrink-0"
+>
+
+<img
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
+className="rounded-xl w-full"
+alt={video.title}
+/>
+
+</Link>
+
+))}
+
+</div>
+
+</section>
+
+
+
+
+<section className="px-6 md:px-10 py-10">
+
+<h2 className="text-3xl font-bold mb-5">
+ Movies
+</h2>
+
+<div className="flex gap-5 overflow-x-auto">
+
+{videos.map((video)=>(
+
+<Link
+key={video.id}
+href={`/watch/${video.id}`}
+className="w-[300px] flex-shrink-0"
+>
+
+<img
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
+className="rounded-xl w-full"
+alt={video.title}
+/>
+
+</Link>
+
+))}
+
+</div>
+
+   </section>
+
+
+    </main>
   );
 }

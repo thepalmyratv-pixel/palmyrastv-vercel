@@ -2,14 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { videos } from "@/lib/videos";
 
 export default function Home() {
 
-  const videos = [
-    "etdqh4E5QI8",
-    "etdqh4E5QI8",
-    "etdqh4E5QI8",
-  ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
 
@@ -29,19 +25,19 @@ export default function Home() {
 
 <section className="relative h-[65vh] md:h-[85vh] overflow-hidden">
 
-  {videos.map((id, index) => (
-  <Link
-    key={index}
-    href={`/watch/${id}`}
-    className="w-[300px] flex-shrink-0"
-  >
-    <img
-  src={`https://img.youtube.com/vi/${videos[currentVideo]}/hqdefault.jpg`}
-  className="absolute inset-0 w-full h-full object-cover"
-  alt="Featured video"
+  <Link href={`/watch/${videos[currentVideo].id}`}>
+<img
+src={
+  videos[currentVideo].type === "youtube"
+  ?
+  `https://img.youtube.com/vi/${videos[currentVideo].id}/hqdefault.jpg`
+  :
+  videos[currentVideo].thumbnail
+}
+className="absolute inset-0 w-full h-full object-cover"
+alt={videos[currentVideo].title}
 />
-  </Link>
-))}
+</Link>
 
   <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
 
@@ -50,15 +46,15 @@ export default function Home() {
     <div>
 
       <h1 className="text-5xl md:text-7xl font-bold mb-5">
-        The World's Most Protected Treasures
-      </h1>
+       {videos[currentVideo].title}
+     </h1>
 
       <p className="text-gray-300 max-w-xl mb-8">
-        Watch the latest football highlights, entertainment and PalmyrasTV exclusives.
-      </p>
+      {videos[currentVideo].description}
+    </p>
 
       <Link
-        href={`/watch/${videos[currentVideo]}`}
+        href={`/watch/${videos[currentVideo].id}`}
         className="bg-red-600 px-8 py-4 rounded-xl font-bold hover:bg-red-700"
       >
         ▶ Watch Now
@@ -80,16 +76,23 @@ export default function Home() {
 
 <div className="flex gap-5 overflow-x-auto">
 
-{videos.map((id)=>(
+{videos.map((video)=>(
 <Link
-key={id}
-href={`/watch/${id}`}
+key={video.id}
+href={`/watch/${video.id}`}
 className="w-[300px] flex-shrink-0"
 >
 
 <img
-src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
 className="rounded-xl"
+alt={video.title}
 />
 
 </Link>
@@ -108,19 +111,28 @@ className="rounded-xl"
 
 <div className="flex gap-5 overflow-x-auto">
 
-{videos.map((id)=>(
+{videos.map((video)=>(
+
 <Link
-key={id}
-href={`/watch/${id}`}
+key={video.id}
+href={`/watch/${video.id}`}
 className="w-[300px] flex-shrink-0"
 >
 
 <img
-src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
-className="rounded-xl"
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
+className="rounded-xl w-full"
+alt={video.title}
 />
 
 </Link>
+
 ))}
 
 </div>
@@ -138,19 +150,28 @@ className="rounded-xl"
 
 <div className="flex gap-5 overflow-x-auto">
 
-{videos.map((id)=>(
+{videos.map((video)=>(
+
 <Link
-key={id}
-href={`/watch/${id}`}
+key={video.id}
+href={`/watch/${video.id}`}
 className="w-[300px] flex-shrink-0"
 >
 
 <img
-src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
-className="rounded-xl"
+src={
+ video.type === "youtube"
+ ?
+ `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`
+ :
+ video.thumbnail
+}
+className="rounded-xl w-full"
+alt={video.title}
 />
 
 </Link>
+
 ))}
 
 </div>
