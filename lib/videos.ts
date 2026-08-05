@@ -21,4 +21,3 @@ export const videos = [
     description: "FIFA World Cup",
   },
 ];
-
