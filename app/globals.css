@@ -42,3 +42,8 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

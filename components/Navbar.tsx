@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 bg-black/90 backdrop-blur border-b border-zinc-800">
+      <header className="sticky top-0 z-50 flex items-center justify-between gap-3 px-4 py-4 bg-black border-b border-zinc-800">
 
-  <div className="flex items-center gap-4">
+  <div className="relative flex-1 max-w-xs">
 
     <button
       onClick={() => setMenuOpen(true)}
@@ -36,11 +36,11 @@ export default function Navbar() {
 
         <div className="relative">
           <input
-            type="text"
-            placeholder="Search videos..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="bg-zinc-900 text-white placeholder-gray-500 border border-zinc-700 rounded-full px-10 py-2 w-56 md:w-72 focus:outline-none focus:border-red-600"
+           type="text"
+           placeholder="Search videos..."
+           value={search}
+           onChange={(e) => setSearch(e.target.value)}
+           className="bg-zinc-900 border border-zinc-700 rounded-full px-10 py-2 w-32 sm:w-48 md:w-72 focus:outline-none focus:border-red-600"
           />
 
           <span className="absolute left-3 top-2.5 text-gray-400">
