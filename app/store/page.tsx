@@ -20,7 +20,7 @@ export default function StorePage() {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg">
-              PalmyrasTV T-Shirt
+              PalmyrasTV Jerseys
             </h3>
             <p className="text-red-500 font-bold mt-2">
               ₹499
