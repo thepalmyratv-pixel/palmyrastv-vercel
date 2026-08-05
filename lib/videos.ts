@@ -9,7 +9,7 @@ export const videos = [
   {
     id: "PTVIntro",
     type: "local",
-    title: "This is PalmyrasTV",
+    title: "Welcome to PalmyrasTV",
     description: "Welcome to PalmyrasTV",
     thumbnail: "/thumbnails/PTVIntro.jpg",
   },
