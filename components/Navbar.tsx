@@ -11,16 +11,16 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50 flex items-center justify-between gap-3 px-4 py-4 bg-black border-b border-zinc-800">
 
-  <div className="relative flex-1 max-w-xs">
+  <div className="flex items-center gap-3">
 
     <button
-      onClick={() => setMenuOpen(true)}
-      className="text-white text-3xl relative z-[60]"
-    >
-      ☰
-    </button>
+   onClick={() => setMenuOpen(true)}
+   className="text-white text-3xl mr-2 relative z-[60]"
+  >
+   ☰
+ </button>
 
-    <Link href="/" className="flex items-center gap-3">
+   <Link href="/" className="flex items-center gap-2">
       <img
         src="/logo.png"
         alt="PalmyrasTV"
