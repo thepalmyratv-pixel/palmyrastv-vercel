@@ -44,7 +44,7 @@ export default function Navbar() {
           />
 
           <span className="absolute left-3 top-2.5 text-gray-400">
-            🔍
+            ⌕
           </span>
         </div>
 

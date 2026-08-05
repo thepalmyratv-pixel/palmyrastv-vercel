@@ -68,7 +68,7 @@ export default function Footer() {
         </Link>
 
         <Link href="/store" className="flex flex-col items-center text-white">
-          <span className="text-xl">🛍</span>
+          <span className="text-xl">▢</span>
           <span className="text-xs">Store</span>
         </Link>
 

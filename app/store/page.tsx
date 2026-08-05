@@ -3,7 +3,7 @@ export default function StorePage() {
     <main className="bg-black min-h-screen text-white px-6 py-10">
 
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">🛒 PalmyrasTV Store</h1>
+        <h1 className="text-4xl font-bold">▢ PalmyrasTV Store</h1>
         <p className="text-gray-400 mt-2">
           Official merchandise and digital products
         </p>
