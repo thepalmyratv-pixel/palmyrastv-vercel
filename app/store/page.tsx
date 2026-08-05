@@ -5,7 +5,7 @@ export default function StorePage() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold">▢ PalmyrasTV Store</h1>
         <p className="text-gray-400 mt-2">
-          Official merchandise and digital products
+          Official merchandise and cloth products
         </p>
       </div>
 
