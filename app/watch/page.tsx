@@ -168,10 +168,3 @@ className="rounded-xl"
 </section>
 
 
-
-</main>
-
-);
-
-
-}
