@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Palmyras TV",
-  description: "Watch the latest entertainment, movies, series and videos on Palmyras TV.",
-  metadataBase: new URL("https://palmyrastv.com"),
+  title: "Palmyra",
+  description: "Watch the latest entertainment, movies, series and videos on Palmyra.",
+  metadataBase: new URL("https://palmyra.vercel.app"),
 
   icons: {
     icon: "/favicon.ico",

@@ -3,7 +3,7 @@ export default function StorePage() {
     <main className="bg-black min-h-screen text-white px-6 py-10">
 
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">▢ PalmyrasTV Store</h1>
+        <h1 className="text-4xl font-bold">▢ Palmyra Store</h1>
         <p className="text-gray-400 mt-2">
           Official merchandise and cloth products
         </p>
@@ -20,7 +20,7 @@ export default function StorePage() {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg">
-              PalmyrasTV Jerseys
+              Palmyra Jerseys
             </h3>
             <p className="text-red-500 font-bold mt-2">
               ₹499
@@ -40,7 +40,7 @@ export default function StorePage() {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg">
-              PalmyrasTV Cap
+              Palmyra Cap
             </h3>
             <p className="text-red-500 font-bold mt-2">
               ₹299
@@ -60,7 +60,7 @@ export default function StorePage() {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg">
-              PalmyrasTV Mug
+              Palmyra Mug
             </h3>
             <p className="text-red-500 font-bold mt-2">
               ₹249
@@ -80,10 +80,10 @@ export default function StorePage() {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg">
-              Premium Membership
+              Palmyra Headband
             </h3>
             <p className="text-red-500 font-bold mt-2">
-              ₹999
+              ₹299
             </p>
             <button className="w-full bg-red-600 hover:bg-red-700 py-2 rounded-lg mt-3">
               Buy Now

@@ -23,12 +23,12 @@ export default function Navbar() {
    <Link href="/" className="flex items-center gap-2">
       <img
         src="/logo.png"
-        alt="PalmyrasTV"
+        alt="Palmyra"
         className="w-10 h-10"
       />
 
       <h1 className="text-2xl md:text-3xl font-bold text-red-600">
-        PalmyrasTV
+        Palmyra
       </h1>
     </Link>
 

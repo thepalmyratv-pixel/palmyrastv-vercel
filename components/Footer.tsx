@@ -8,11 +8,11 @@ export default function Footer() {
 
           <div>
             <h3 className="text-2xl font-bold text-red-600 mb-3">
-              PalmyrasTV
+              Palmyra
             </h3>
 
             <p className="text-gray-400">
-              PalmyrasTV is a modern OTT streaming platform for
+              Palmyra is a modern OTT streaming platform for
               entertainment, sports, movies and digital culture connect.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
 
 
         <div className="border-t border-zinc-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-          © 2026 - PalmyrasTV by Assist Network Ltd • All Rights Reserved
+          © 2026 - Palmyra by Assist Network Ltd • All Rights Reserved
         </div>
 
       </footer>
